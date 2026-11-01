@@ -1,229 +1,389 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alberto Torres</title>
-    <link rel="icon" href="Foto Profesional Sin fondo.png" />
-    <link rel="stylesheet" href="CompatibilityBrowsers.css" />
-    <link rel="stylesheet" href="style.css" />
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102820">
+  <meta name="description" content="Sustentación del proyecto de grado sobre un modelo multiagente de inteligencia artificial aplicado al ciclo de vida del desarrollo de software.">
+  <title>Modelo multiagente para el SDLC | Sustentación</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
 
-    <meta
-      name="description"
-      content="Alberto Torres, Ingeniero de Software especializado en desarrollo web, automatización de procesos, inteligencia artificial y soluciones digitales para empresas y emprendedores."
-    />
+  <header class="site-header" id="site-header">
+    <a class="university-brand" href="#inicio" aria-label="Ir al inicio">
+      <img src="assets/logo-universidad-cartagena.png" alt="Universidad de Cartagena, fundada en 1827">
+    </a>
 
-    <meta
-      name="keywords"
-      content="Alberto Torres, Ingeniero de Software, Desarrollador Web, Programador Full Stack, Automatización, Inteligencia Artificial, Desarrollo de Software, Desarrollo Web, Colombia, Sistemas de Información, Aplicaciones Web, APIs, Python, JavaScript, React, Node.js"
-    />
+    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú de navegación">
+      <span></span><span></span>
+    </button>
 
-    <meta name="author" content="Alberto Torres" />
+    <nav class="main-nav" id="main-nav" aria-label="Secciones de la sustentación">
+      <a class="nav-link active" href="#inicio">Inicio</a>
+      <a class="nav-link" href="#contexto">Contexto</a>
+      <a class="nav-link" href="#problema">Problema</a>
+      <a class="nav-link" href="#antecedentes">Antecedentes</a>
+      <a class="nav-link" href="#bases">Bases teóricas</a>
+      <a class="nav-link" href="#metodologia">Metodología</a>
+      <a class="nav-link" href="#resultados">Resultados</a>
+      <a class="nav-link" href="#demostracion">Demostración</a>
+      <a class="nav-link" href="#conclusion">Conclusión</a>
+    </nav>
 
-    <meta name="robots" content="index, follow" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
-  <body>
-    <header class="header">
-      <div class="logo">A<span>T</span></div>
-      <div class="menu">☰</div>
-    </header>
+    <button class="fullscreen-button" id="fullscreen-button" type="button" title="Activar o salir de pantalla completa">
+      <span class="fullscreen-icon" aria-hidden="true">⛶</span>
+      <span id="fullscreen-label">Presentar</span>
+    </button>
+  </header>
 
-    <section class="hero">
-      <div class="hero-text">
-        <h1>ALBERTO <span>TORRES</span></h1>
-        <h3>INGENIERO DE SOFTWARE</h3>
+  <main>
+    <!-- 00 · Portada -->
+    <section class="hero section-anchor" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-noise" aria-hidden="true"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow eyebrow-light"><span class="eyebrow-dot"></span> PROYECTO DE GRADO <span class="eyebrow-separator">/</span> 2026</p>
+        <p class="hero-kicker">Ingeniería de Software · Universidad de Cartagena</p>
+        <!-- TÍTULO DE TRABAJO: reemplazar aquí por el título oficial aprobado si es diferente. -->
+        <h1 id="hero-title">Modelo multiagente de IA para optimizar el <em>ciclo de vida</em> del desarrollo de software</h1>
+        <p class="hero-description">Diseño de un modelo que coordina agentes especializados y conserva la validación humana en las etapas críticas del proceso de desarrollo.</p>
 
-        <p>
-          Desarrollo soluciones tecnológicas enfocadas en
-          <span>resultados reales</span>, combinando software y estrategia para
-          impulsar <span>negocios digitales</span>.
-        </p>
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <span class="meta-label">AUTOR</span>
+            <strong>Alberto Miguel Torres Ortega</strong>
+          </div>
+          <div class="hero-meta-rule" aria-hidden="true"></div>
+          <div class="hero-meta-item">
+            <span class="meta-label">TUTOR</span>
+            <strong>Alexander Benavides Acuña</strong>
+          </div>
+        </div>
 
-        <p>
-          Creo herramientas digitales, automatizaciones y productos tecnológicos
-          que ayudan a <span>crecer, vender y optimizar procesos</span>.
-        </p>
-
-        <a href="https://wa.me/573027997269" target="_blank" class="btn">
-          HABLEMOS →
-        </a>
+        <div class="hero-actions">
+          <a class="button button-gold" href="#contexto">Explorar investigación <span aria-hidden="true">↘</span></a>
+          <span class="hero-note">Presentación académica · Colombia</span>
+        </div>
       </div>
-      <div class="hero-img">
-        <img src="Foto Profesional Sin fondo.png" alt="perfil" />
+
+      <div class="hero-visual reveal reveal-late" aria-label="Ilustración conceptual de agentes especializados coordinados">
+        <div class="visual-caption"><span class="caption-line"></span> UNA IDEA, VARIOS AGENTES</div>
+        <div class="agent-universe">
+          <div class="orbit orbit-outer"></div>
+          <div class="orbit orbit-inner"></div>
+          <div class="orbit-node node-req"><span>01</span><b>Req.</b></div>
+          <div class="orbit-node node-code"><span>02</span><b>Código</b></div>
+          <div class="orbit-node node-test"><span>03</span><b>Pruebas</b></div>
+          <div class="orbit-node node-doc"><span>04</span><b>Docs</b></div>
+          <div class="orbit-node node-design"><span>05</span><b>Diseño</b></div>
+          <div class="orbit-node node-human"><span class="human-dot"></span><b>Validación humana</b></div>
+          <div class="hub">
+            <span class="hub-overline">COORDINACIÓN</span>
+            <span class="hub-label">SDLC</span>
+            <span class="hub-under">agentes + criterio humano</span>
+          </div>
+          <div class="orbit-center-dot" aria-hidden="true"></div>
+        </div>
+        <p class="visual-footnote">Automatizar tareas. Conectar etapas. Mantener supervisión.</p>
       </div>
+
+      <a class="scroll-cue" href="#contexto" aria-label="Desplazarse a la siguiente sección"><span></span> DESLIZA PARA EXPLORAR</a>
     </section>
 
-    <section class="about">
-      <h2>SOBRE <span>MÍ</span></h2>
-
-      <p>
-        Soy ingeniero de software apasionado por crear soluciones tecnológicas
-        prácticas que generen valor real. Combino conocimiento técnico con
-        visión comercial para transformar ideas en productos digitales
-        funcionales y escalables.
-      </p>
-
-      <div class="cards">
-        <div class="card">
-          <i class="bi bi-code-slash"></i>Desarrollo Software a Medida
-        </div>
-        <div class="card">
-          <i class="bi bi-gear"></i>Automatización de Procesos
-        </div>
-        <div class="card">
-          <i class="bi bi-rocket-takeoff"></i>Productos Digitales
-        </div>
-        <div class="card">
-          <i class="bi bi-graph-up-arrow"></i>Ventas y Crecimiento
-        </div>
-      </div>
-    </section>
-
-    <!-- PROYECTOS -->
-    <section class="projects">
-      <div class="projects-header">
-        <h2>PROYECTOS <span>DESTACADOS</span></h2>
-        <a href="#" id="toggleBtn">Ver todos →</a>
+    <!-- 01 · Contexto e idea memorable -->
+    <section class="section section-context section-anchor" id="contexto" aria-labelledby="context-title">
+      <div class="section-head reveal">
+        <p class="eyebrow"><span>01</span> · CONTEXTO</p>
+        <h2 id="context-title">El reto no es automatizar una tarea.<br><em>Es lograr que las etapas colaboren.</em></h2>
+        <p class="section-intro">La IA ya puede apoyar partes del desarrollo. La dificultad aparece cuando los resultados quedan aislados y no existe una coordinación clara entre requerimientos, código, pruebas y revisión.</p>
       </div>
 
-      <div class="project-list">
-        <!-- 3 visibles -->
-        <div class="project-card" onclick="goTo('proyecto1.html')">
-          <div class="icon"><i class="bi bi-shop"></i></div>
-          <div class="info">
-            <h4>Sistema de Gestión</h4>
-            <p>Organiza clientes y ventas.</p>
+      <div class="comparison-grid reveal">
+        <article class="comparison-card traditional-card">
+          <div class="comparison-card-top">
+            <span class="mini-label">01 / MODELO TRADICIONAL</span>
+            <span class="status status-muted">Fragmentado</span>
           </div>
-          <div class="arrow">→</div>
-        </div>
-
-        <div class="project-card" onclick="goTo('proyecto2.html')">
-          <div class="icon gray"><i class="bi bi-robot"></i></div>
-          <div class="info">
-            <h4>Automatización</h4>
-            <p>Optimiza procesos comerciales.</p>
-          </div>
-          <div class="arrow">→</div>
-        </div>
-
-        <div class="project-card" onclick="goTo('proyecto3.html')">
-          <div class="icon"><i class="bi bi-code-slash"></i></div>
-          <div class="info">
-            <h4>App Web</h4>
-            <p>Solución digital personalizada.</p>
-          </div>
-          <div class="arrow">→</div>
-        </div>
-
-        <!-- extras -->
-        <div class="project-card extra" onclick="goTo('proyecto4.html')">
-          <div class="icon"><i class="bi bi-globe"></i></div>
-          <div class="info">
-            <h4>Plataforma Web</h4>
-            <p>Escalable y moderna.</p>
-          </div>
-          <div class="arrow">→</div>
-        </div>
-
-        <div class="project-card extra" onclick="goTo('proyecto5.html')">
-          <div class="icon"><i class="bi bi-bar-chart"></i></div>
-          <div class="info">
-            <h4>Analítica</h4>
-            <p>Datos en tiempo real.</p>
-          </div>
-          <div class="arrow">→</div>
-        </div>
-      </div>
-
-      <!-- TECNOLOGÍAS -->
-      <div class="tech">
-        <h3>TECNOLOGÍAS</h3>
-        <div class="tech-list">
-          <span>React</span>
-          <span>Node.js</span>
-          <span>Python</span>
-          <span>JavaScript</span>
-          <span>MySQL</span>
-          <span>MongoDB</span>
-          <span>Git</span>
-          <span>APIs</span>
-        </div>
-      </div>
-
-      <!-- CTA -->
-      <div class="cta-box">
-        <div>
-          <p>
-            <strong>¿Tienes un <span>proyecto</span>?</strong>
-          </p>
-          <small>Hablemos.</small>
-        </div>
-
-        <a href="https://wa.me/573027997269" target="_blank" class="cta-btn">
-          <i class="bi bi-send-fill"></i>
-        </a>
-      </div>
-    </section>
-
-    <footer class="pie-pagina">
-      <div class="section articulos">
-        <h2>Te puede interesar</h2>
-        <div class="articulos-interes">
-          <a
-            href="https://alber70rres.github.io/logicaDeProgramacion.github.io/index.html"
-            target="_blank"
-            ><i class="bi bi-x-diamond-fill"></i> Fundamentos de programación</a
-          >
-          <a
-            href="https://alber70rres.github.io/Seguridad-informatica.github.io/"
-            target="_blank"
-            ><i class="bi bi-x-diamond-fill"></i> Protege tu información</a
-          >
-        </div>
-      </div>
-      <br />
-      <hr />
-
-      <div class="section redes">
-        <h2>Mis redes sociales</h2>
-        <div class="articulos-redes">
-          <a href="https://www.youtube.com/@albertocoder" target="_blank"
-            ><i class="fuente bi bi-youtube"></i> Youtube</a
-          >
-          <a href="https://www.instagram.com/albertorres_coder/" target="_blank"
-            ><i class="fuente bi bi-instagram"></i> Instagram</a
-          >
-          <a href="https://web.facebook.com/Albertocoder/" target="_blank"
-            ><i class="fuente bi bi-facebook"></i> Facebook</a
-          >
-          <a href="https://x.com/albertocoder" target="_blank">
-            <i class="bi bi-twitter"></i> Twitter</a
-          >
-          <a href="https://github.com/CoderAlberto" target="_blank">
-            <i class="fuente bi bi-github"></i>
-            Github
+          <h3>Herramientas y tareas por separado</h3>
+          <p>Cada etapa resuelve su parte, pero conectar los resultados depende en gran medida del equipo.</p>
+          <a class="comparison-image-link" href="assets/equipo-tradicional.png" target="_blank" rel="noopener" aria-label="Abrir ilustración del equipo tradicional">
+            <img class="comparison-image" src="assets/equipo-tradicional.png" alt="Equipo tradicional de desarrollo de software: gestión del proyecto, análisis, diseño y programación" loading="lazy">
           </a>
-          <a href="https://www.linkedin.com/in/albertocoder/" target="_blank">
-            <i class="fa fa-linkedin-square"></i>
-            LinkedIn
+        </article>
+
+        <article class="comparison-card multiagent-card">
+          <div class="comparison-card-top">
+            <span class="mini-label">02 / MODELO MULTIAGENTE</span>
+            <span class="status status-green">Coordinado</span>
+          </div>
+          <h3>Agentes especializados con supervisión</h3>
+          <p>Un coordinador organiza el flujo y la persona valida los resultados antes de avanzar.</p>
+          <a class="comparison-image-link" href="assets/sistema-multiagente.png" target="_blank" rel="noopener" aria-label="Abrir ilustración del sistema multiagente">
+            <img class="comparison-image" src="assets/sistema-multiagente.png" alt="Persona supervisando desde un portátil un sistema de agentes de inteligencia artificial coordinados" loading="lazy">
           </a>
+        </article>
+      </div>
+
+      <div class="thesis-statement reveal">
+        <span class="statement-mark" aria-hidden="true">“</span>
+        <p>La propuesta no busca reemplazar al desarrollador: busca <strong>coordinar el trabajo de agentes especializados</strong> sin perder el control humano sobre las decisiones importantes.</p>
+        <span class="statement-source">IDEA CENTRAL DE LA INVESTIGACIÓN</span>
+      </div>
+    </section>
+
+    <!-- 02 · Problema y matriz de consistencia -->
+    <section class="section section-problem section-anchor" id="problema" aria-labelledby="problem-title">
+      <div class="section-head reveal">
+        <p class="eyebrow"><span>02</span> · PLANTEAMIENTO DEL PROBLEMA</p>
+        <h2 id="problem-title">Una brecha de <em>coordinación, control y contexto.</em></h2>
+        <p class="section-intro">El proyecto parte de herramientas que resuelven tareas puntuales, pero no siempre conectan de forma integral las distintas fases del SDLC.</p>
+      </div>
+
+      <article class="central-question reveal">
+        <div class="question-index">PREGUNTA DE INVESTIGACIÓN</div>
+        <p>¿Cómo diseñar, implementar y desplegar un modelo basado en agentes de Inteligencia Artificial que permita optimizar el proceso de desarrollo de software (SDLC) en el contexto colombiano, a través de la coordinación de agentes especializados y la incorporación de mecanismos de validación humana entre las distintas etapas del proceso?</p>
+        <div class="question-bottom"><span class="question-line"></span><span>Problema central</span></div>
+      </article>
+
+      <div class="matrix-heading reveal">
+        <div><p class="eyebrow">MATRIZ DE CONSISTENCIA</p><h3>Del problema a la respuesta propuesta</h3></div>
+        <p>Los problemas específicos se resumen a partir de las dimensiones y preguntas de investigación descritas en el documento.</p>
+      </div>
+
+      <div class="consistency-matrix reveal" role="table" aria-label="Matriz de consistencia de problemas y objetivos">
+        <div class="matrix-head" role="row">
+          <span role="columnheader">DIMENSIÓN</span>
+          <span role="columnheader">PROBLEMA ESPECÍFICO</span>
+          <span role="columnheader">RESPUESTA / OBJETIVO VINCULADO</span>
+        </div>
+        <div class="matrix-row" role="row">
+          <div class="matrix-dimension" role="cell"><span>01</span><b>Actividades</b></div>
+          <p role="cell">¿Qué actividades del ciclo de vida del software pueden optimizarse mediante IA?</p>
+          <p role="cell">Identificar fundamentos y usos de agentes de IA en las fases del SDLC.</p>
+        </div>
+        <div class="matrix-row" role="row">
+          <div class="matrix-dimension" role="cell"><span>02</span><b>Orquestación</b></div>
+          <p role="cell">¿Qué plataformas y mecanismos permiten coordinar agentes y herramientas?</p>
+          <p role="cell">Analizar arquitecturas existentes y definir un mecanismo de comunicación y coordinación.</p>
+        </div>
+        <div class="matrix-row" role="row">
+          <div class="matrix-dimension" role="cell"><span>03</span><b>Especialización</b></div>
+          <p role="cell">¿Qué tipos de agentes se necesitan y cómo se distribuyen las responsabilidades?</p>
+          <p role="cell">Definir roles especializados y su colaboración para apoyar el proceso de desarrollo.</p>
+        </div>
+        <div class="matrix-row" role="row">
+          <div class="matrix-dimension" role="cell"><span>04</span><b>Supervisión</b></div>
+          <p role="cell">¿Cómo conservar la validación humana entre las etapas automatizadas?</p>
+          <p role="cell">Incorporar puntos de revisión para aprobar resultados antes de continuar el flujo.</p>
         </div>
       </div>
-      <br />
-      <hr />
-      <div class="section derechos">
-        <small>&copy; Copyright Alberto Torres 2026</small>
+      <p class="micro-note reveal">Nota para la versión final: esta matriz es una síntesis para sustentación; conviene contrastar su redacción con cualquier formato de matriz exigido por el programa.</p>
+    </section>
+
+    <!-- 03 · Antecedentes -->
+    <section class="section section-antecedents section-anchor" id="antecedentes" aria-labelledby="antecedents-title">
+      <div class="section-head reveal">
+        <p class="eyebrow"><span>03</span> · ANTECEDENTES</p>
+        <h2 id="antecedents-title">Cinco estudios que <em>construyen el punto de partida.</em></h2>
+        <p class="section-intro">La revisión combina propuestas de IA aplicada al SDLC con trabajos sobre colaboración multiagente y aportes del contexto colombiano.</p>
       </div>
-    </footer>
-    <script src="BasicFuncionality.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  </body>
+
+      <div class="research-grid-table reveal" role="table" aria-label="Resumen de cinco antecedentes investigativos">
+        <div class="research-table-head" role="row">
+          <span role="columnheader">AUTOR / AÑO</span>
+          <span role="columnheader">ÁMBITO</span>
+          <span role="columnheader">ESTUDIO</span>
+          <span role="columnheader">APORTE / RESULTADO RELEVANTE</span>
+        </div>
+        <article class="research-row" role="row">
+          <div class="research-author" role="cell"><span class="row-number">01</span><strong>Soni et al.</strong><small>2023</small></div>
+          <div role="cell"><span class="context-tag">Internacional</span></div>
+          <div class="study-name" role="cell">Integrating AI into the Software Development Life Cycle</div>
+          <p role="cell">Examina usos de IA en diseño, desarrollo, revisión de código y despliegue; respalda la posibilidad de aplicar IA en varias fases del SDLC.</p>
+        </article>
+        <article class="research-row" role="row">
+          <div class="research-author" role="cell"><span class="row-number">02</span><strong>Huang et al.</strong><small>2024</small></div>
+          <div role="cell"><span class="context-tag">Internacional</span></div>
+          <div class="study-name" role="cell">AgentCoder: Multi-Agent-based Code Generation</div>
+          <p role="cell">Distribuye programación, diseño de pruebas y ejecución de pruebas entre agentes; utiliza retroalimentación iterativa para corregir el código generado.</p>
+        </article>
+        <article class="research-row" role="row">
+          <div class="research-author" role="cell"><span class="row-number">03</span><strong>Hong et al.</strong><small>2024</small></div>
+          <div role="cell"><span class="context-tag">Internacional</span></div>
+          <div class="study-name" role="cell">MetaGPT: Meta Programming for a Multi-Agent Collaborative Framework</div>
+          <p role="cell">Propone roles especializados y procedimientos estructurados para dividir tareas complejas y coordinar agentes con resultados más coherentes.</p>
+        </article>
+        <article class="research-row" role="row">
+          <div class="research-author" role="cell"><span class="row-number">04</span><strong>Sanguino-Reyes &amp; Cuesta-Quintero</strong><small>2022</small></div>
+          <div role="cell"><span class="context-tag context-tag-local">Colombia</span></div>
+          <div class="study-name" role="cell">La inteligencia artificial en la ingeniería de requerimientos: un estudio de mapeo sistemático</div>
+          <p role="cell">Analiza el uso de IA en ingeniería de requerimientos y su potencial para apoyar actividades de esta fase, base para pensar en su integración con otras etapas.</p>
+        </article>
+        <article class="research-row" role="row">
+          <div class="research-author" role="cell"><span class="row-number">05</span><strong>Espitia Cubillos et al.</strong><small>2025</small></div>
+          <div role="cell"><span class="context-tag context-tag-local">Colombia</span></div>
+          <div class="study-name" role="cell">Sistema multiagente para la captura y el ruteo de pedidos</div>
+          <p role="cell">Distribuye la captura y gestión de pedidos entre agentes con responsabilidades concretas; aporta un ejemplo nacional de coordinación multiagente en otro dominio.</p>
+        </article>
+      </div>
+      <p class="micro-note reveal">El documento clasifica los trabajos como internacionales o nacionales; los países individuales de los estudios internacionales no se especifican en el texto consultado.</p>
+    </section>
+
+    <!-- 04 · Bases teóricas -->
+    <section class="section section-theory section-anchor" id="bases" aria-labelledby="theory-title">
+      <div class="section-head reveal">
+        <p class="eyebrow"><span>04</span> · BASES TEÓRICAS</p>
+        <h2 id="theory-title">Los conceptos que sostienen <em>el modelo.</em></h2>
+        <p class="section-intro">Definiciones breves para presentar oralmente la base conceptual, sin convertir la sustentación en una lectura de texto.</p>
+      </div>
+
+      <div class="theory-grid" role="table" aria-label="Conceptos principales del marco teórico">
+        <div class="theory-head" role="row"><span role="columnheader">CONCEPTO</span><span role="columnheader">DEFINICIÓN CLAVE</span><span role="columnheader">POR QUÉ IMPORTA EN EL PROYECTO</span></div>
+        <article class="theory-row reveal" role="row"><div class="theory-term" role="cell"><span>01</span><strong>Modelo de lenguaje (LLM)</strong></div><p role="cell">Modelo capaz de interpretar y generar lenguaje a partir de instrucciones y contexto.</p><p role="cell">Proporciona capacidades de razonamiento y generación a los agentes.</p></article>
+        <article class="theory-row reveal" role="row"><div class="theory-term" role="cell"><span>02</span><strong>Agente de IA</strong></div><p role="cell">Componente que interpreta un objetivo, planifica acciones y utiliza herramientas para ejecutarlas.</p><p role="cell">Permite delegar responsabilidades concretas en lugar de solicitar todo a un único sistema.</p></article>
+        <article class="theory-row reveal" role="row"><div class="theory-term" role="cell"><span>03</span><strong>Sistema multiagente</strong></div><p role="cell">Conjunto de agentes especializados que colaboran e intercambian resultados.</p><p role="cell">Constituye la base del modelo: distribuir tareas y coordinar capacidades diferentes.</p></article>
+        <article class="theory-row reveal" role="row"><div class="theory-term" role="cell"><span>04</span><strong>SDLC</strong></div><p role="cell">Ciclo de vida del desarrollo de software: desde los requerimientos hasta las pruebas, el despliegue y el mantenimiento.</p><p role="cell">Delimita las actividades que el modelo busca apoyar y conectar.</p></article>
+        <article class="theory-row reveal" role="row"><div class="theory-term" role="cell"><span>05</span><strong>Orquestación</strong></div><p role="cell">Organización y coordinación de tareas, dependencias y comunicación entre agentes.</p><p role="cell">Establece el orden de ejecución y el flujo de resultados entre las fases del proceso.</p></article>
+        <article class="theory-row reveal" role="row"><div class="theory-term" role="cell"><span>06</span><strong>Human-in-the-loop</strong></div><p role="cell">Enfoque que mantiene a una persona revisando o aprobando resultados en momentos definidos.</p><p role="cell">Ayuda a conservar la supervisión y la responsabilidad humana en decisiones críticas.</p></article>
+        <article class="theory-row reveal" role="row"><div class="theory-term" role="cell"><span>07</span><strong>Workflow</strong></div><p role="cell">Secuencia organizada de tareas y dependencias para completar un proceso.</p><p role="cell">Permite definir qué se ejecuta, en qué orden y qué resultado necesita la siguiente etapa.</p></article>
+        <article class="theory-row reveal" role="row"><div class="theory-term" role="cell"><span>08</span><strong>RAG</strong></div><p role="cell">Generación aumentada por recuperación: consulta fuentes externas antes de generar una respuesta.</p><p role="cell">Puede ayudar a que un agente fundamente respuestas en documentación pertinente.</p></article>
+      </div>
+    </section>
+
+    <!-- 05 · Metodología -->
+    <section class="section section-method section-anchor" id="metodologia" aria-labelledby="method-title">
+      <div class="section-head reveal">
+        <p class="eyebrow"><span>05</span> · METODOLOGÍA</p>
+        <h2 id="method-title">De la revisión documental <em>al prototipo.</em></h2>
+        <p class="section-intro">El proceso combina selección y análisis de fuentes con observación directa de los artefactos del prototipo tecnológico.</p>
+      </div>
+
+      <div class="method-stats reveal">
+        <div class="stat-card stat-primary"><span class="stat-number">22</span><span class="stat-label">artículos científicos<br>en la muestra principal</span></div>
+        <div class="stat-card"><span class="stat-number">2020–26</span><span class="stat-label">periodo de búsqueda<br>documental</span></div>
+        <div class="stat-card"><span class="stat-number">7 + 1</span><span class="stat-label">agentes especializados<br>y un coordinador</span></div>
+        <div class="stat-card"><span class="stat-number">6</span><span class="stat-label">fuentes / bases de<br>búsqueda académica</span></div>
+      </div>
+
+      <div class="method-layout">
+        <div class="method-details reveal">
+          <article class="method-card">
+            <div class="method-card-icon">A</div>
+            <div><h3>Unidades de análisis</h3><p>Fuentes documentales y prototipo tecnológico.</p></div>
+          </article>
+          <article class="method-card">
+            <div class="method-card-icon">B</div>
+            <div><h3>Población y muestra</h3><p>Publicaciones científicas y fuentes técnicas sobre IA, agentes, orquestación y SDLC. Muestra principal: 22 artículos seleccionados de forma no probabilística e intencional.</p></div>
+          </article>
+          <article class="method-card">
+            <div class="method-card-icon">C</div>
+            <div><h3>Técnicas e instrumentos</h3><p>Revisión documental y observación directa. Matriz de clasificación de fuentes, capturas de pantalla, artefactos del desarrollo y registro de casos de prueba.</p></div>
+          </article>
+          <article class="method-card">
+            <div class="method-card-icon">D</div>
+            <div><h3>Entorno tecnológico</h3><p>OpenClaw, API de modelos de lenguaje, servidor VPS, Telegram, Git/GitHub, ClawCode y Visual Studio Code. Docker se contempla como alternativa por validar.</p></div>
+          </article>
+        </div>
+
+        <aside class="method-sidebar reveal reveal-late">
+          <p class="mini-label">FUENTES CONSULTADAS</p>
+          <div class="source-chip-list"><span>Google Scholar</span><span>ScienceDirect</span><span>IEEE Xplore</span><span>Semantic Scholar</span><span>Scopus</span><span>SciELO</span></div>
+          <div class="method-sidebar-divider"></div>
+          <p class="mini-label">CRITERIOS CLAVE</p>
+          <ul class="check-list">
+            <li><span>✓</span> Publicaciones de 2020 a 2026.</li>
+            <li><span>✓</span> Acceso abierto y pertinencia temática.</li>
+            <li><span>✓</span> Relación con las preguntas de investigación.</li>
+            <li><span>✓</span> Comparación de roles, coordinación y supervisión humana.</li>
+          </ul>
+          <p class="method-caveat">La clasificación formal del tipo y diseño de investigación debe mantener la misma denominación que se acuerde en la versión final del documento.</p>
+        </aside>
+      </div>
+
+      <div class="method-flow reveal" aria-label="Secuencia general de trabajo">
+        <div class="flow-step"><span>01</span><b>Buscar</b><small>Fuentes científicas</small></div><span class="flow-arrow">→</span>
+        <div class="flow-step"><span>02</span><b>Filtrar</b><small>Criterios definidos</small></div><span class="flow-arrow">→</span>
+        <div class="flow-step"><span>03</span><b>Analizar</b><small>Matriz documental</small></div><span class="flow-arrow">→</span>
+        <div class="flow-step"><span>04</span><b>Diseñar</b><small>Roles y orquestación</small></div><span class="flow-arrow">→</span>
+        <div class="flow-step"><span>05</span><b>Observar</b><small>Prototipo y pruebas</small></div>
+      </div>
+    </section>
+
+    <!-- 06 · Resultados: espacio reservado -->
+    <section class="section section-results section-anchor" id="resultados" aria-labelledby="results-title">
+      <div class="section-head reveal">
+        <p class="eyebrow"><span>06</span> · RESULTADOS / SOLUCIÓN</p>
+        <h2 id="results-title">La arquitectura <em>multiagente.</em></h2>
+        <p class="section-intro">Dos vistas complementarias: el modelo propuesto y la plataforma que lo ejecuta.</p>
+      </div>
+      <div class="architecture-gallery reveal">
+        <figure class="architecture-card">
+          <figcaption><span>01</span><div><strong>Arquitectura general del modelo</strong><small>Agentes especializados · Coordinación · Validación humana</small></div></figcaption>
+          <a href="assets/arquitectura-general.png" target="_blank" rel="noopener" aria-label="Abrir arquitectura general en tamaño completo"><img src="assets/arquitectura-general.png" alt="Diagrama general del modelo multiagente para el ciclo de vida del desarrollo de software" loading="lazy"></a>
+        </figure>
+        <figure class="architecture-card">
+          <figcaption><span>02</span><div><strong>Arquitectura funcional de OpenClaw</strong><small>Gateway · Herramientas · Skills · Memoria y conectores</small></div></figcaption>
+          <a href="assets/arquitectura-openclaw.png" target="_blank" rel="noopener" aria-label="Abrir arquitectura de OpenClaw en tamaño completo"><img src="assets/arquitectura-openclaw.png" alt="Diagrama de arquitectura funcional de OpenClaw" loading="lazy"></a>
+        </figure>
+        <figure class="architecture-card">
+          <figcaption><span>03</span><div><strong>Espacios de trabajo e instrucciones</strong><small>Archivos de contexto · Roles · Reglas de acceso</small></div></figcaption>
+          <a href="assets/espacios-trabajo-agentes.png" target="_blank" rel="noopener" aria-label="Abrir diagrama de espacios de trabajo"><img src="assets/espacios-trabajo-agentes.png" alt="Archivos de configuración que definen el contexto y las instrucciones de los agentes" loading="lazy"></a>
+        </figure>
+        <figure class="architecture-card">
+          <figcaption><span>04</span><div><strong>Agentes configurados en OpenClaw</strong><small>Especialización · Modelos · Actividad de los agentes</small></div></figcaption>
+          <a href="assets/agentes-openclaw.png" target="_blank" rel="noopener" aria-label="Abrir captura de los agentes de OpenClaw"><img src="assets/agentes-openclaw.png" alt="Vista de agentes especializados configurados en OpenClaw" loading="lazy"></a>
+        </figure>
+      </div>
+      <p class="architecture-note">La primera imagen explica la solución propuesta; la segunda, la plataforma tecnológica que sirve como entorno de ejecución.</p>
+    </section>
+
+    <!-- 07 · Demostración del sistema en funcionamiento -->
+    <section class="section section-demo section-anchor" id="demostracion" aria-labelledby="demo-title">
+      <div class="section-head reveal">
+        <p class="eyebrow"><span>07</span> · DEMOSTRACIÓN DEL SISTEMA EN FUNCIONAMIENTO</p>
+        <h2 id="demo-title">Evidencia del caso de uso <em>end-to-end.</em></h2>
+        <p class="section-intro">Espacio preparado para insertar el video demostrativo completo del flujo multiagente cuando la URL definitiva esté disponible.</p>
+      </div>
+
+      <article class="demo-video-card reveal">
+        <div class="demo-video-label"><span class="demo-dot"></span> VIDEO DEMOSTRATIVO PRÓXIMAMENTE</div>
+        <div class="demo-video-embed" aria-label="Contenedor del video demostrativo">
+          <!-- Reemplazar este bloque por iframe/video cuando exista la URL final. -->
+          <div class="demo-play-button" aria-hidden="true">▶</div>
+          <div class="demo-video-placeholder">
+            <strong>Demostración del sistema en funcionamiento</strong>
+            <span>Placeholder listo para GitHub Pages</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 08 · Conclusión: texto de prueba claramente marcado -->
+    <section class="section section-conclusion section-anchor" id="conclusion" aria-labelledby="conclusion-title">
+      <div class="section-head reveal">
+        <p class="eyebrow"><span>08</span> · CONCLUSIÓN</p>
+        <h2 id="conclusion-title">Una idea que conecta <em>el proceso completo.</em></h2>
+        <p class="section-intro">El cierre definitivo se redactará después de consolidar los resultados y la validación del prototipo.</p>
+      </div>
+      <article class="conclusion-placeholder reveal">
+        <div class="demo-label"><span class="demo-dot"></span> TEXTO DE PRUEBA · REEMPLAZAR AL FINALIZAR</div>
+        <p>El modelo propuesto busca integrar capacidades de Inteligencia Artificial a través de agentes especializados que colaboran bajo un flujo coordinado, con puntos de validación humana. La conclusión final deberá establecer qué objetivos se alcanzaron, qué evidencias aporta el prototipo y cuáles son sus limitaciones.</p>
+        <div class="conclusion-signature"><span class="signature-line"></span><span>CIERRE DE LA SUSTENTACIÓN</span></div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand"><img src="assets/logo-universidad-cartagena.png" alt="Universidad de Cartagena"><p>Proyecto de grado · Ingeniería de Software</p></div>
+      <a href="#inicio" class="back-to-top">Volver al inicio <span aria-hidden="true">↑</span></a>
+    </div>
+    <div class="footer-bottom"><span>Alberto Miguel Torres Ortega</span><span>Universidad de Cartagena · 2026</span><span>Modelo multiagente de IA para el SDLC</span></div>
+  </footer>
+</body>
 </html>
