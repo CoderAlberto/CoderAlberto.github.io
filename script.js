@@ -94,6 +94,40 @@
     syncFullscreenLabel();
   });
 
+
+
+  // Copiar el prompt de demostración MCP para ejecutarlo desde ProjectManager.
+  const copyPromptButton = document.getElementById('copy-email-prompt');
+  const emailPrompt = document.getElementById('email-agent-prompt');
+  const copyFeedback = document.getElementById('copy-feedback');
+
+  if (copyPromptButton && emailPrompt && copyFeedback) {
+    copyPromptButton.addEventListener('click', async () => {
+      const promptText = emailPrompt.textContent.trim();
+      try {
+        await navigator.clipboard.writeText(promptText);
+        copyPromptButton.innerHTML = '<span aria-hidden="true">✓</span> Prompt copiado';
+        copyFeedback.textContent = 'Prompt copiado.';
+      } catch (error) {
+        const temporaryField = document.createElement('textarea');
+        temporaryField.value = promptText;
+        temporaryField.setAttribute('readonly', '');
+        temporaryField.style.position = 'absolute';
+        temporaryField.style.left = '-9999px';
+        document.body.appendChild(temporaryField);
+        temporaryField.select();
+        const copied = document.execCommand('copy');
+        temporaryField.remove();
+        if (copied) {
+          copyPromptButton.innerHTML = '<span aria-hidden="true">✓</span> Prompt copiado';
+          copyFeedback.textContent = 'Prompt copiado.';
+        } else {
+          copyFeedback.textContent = 'No se pudo copiar automáticamente. Selecciona y copia el texto del prompt.';
+        }
+      }
+    });
+  }
+
   // ESC closes the mobile menu when fullscreen is not active.
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && mainNav.classList.contains('is-open')) {
