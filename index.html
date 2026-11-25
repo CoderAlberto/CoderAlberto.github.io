@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#102820">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="description" content="Sustentación del proyecto de grado sobre un modelo multiagente de inteligencia artificial aplicado al ciclo de vida del desarrollo de software.">
   <title>Modelo multiagente para el SDLC | Sustentación</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -266,7 +267,7 @@
       <div class="method-stats reveal">
         <div class="stat-card stat-primary"><span class="stat-number">22</span><span class="stat-label">artículos científicos<br>en la muestra principal</span></div>
         <div class="stat-card"><span class="stat-number">2020–26</span><span class="stat-label">periodo de búsqueda<br>documental</span></div>
-        <div class="stat-card"><span class="stat-number">7 + 1</span><span class="stat-label">agentes especializados<br>y un coordinador</span></div>
+        <div class="stat-card"><span class="stat-number">6 + 1</span><span class="stat-label">agentes especializados<br>+ 1 agente coordinador</span></div>
         <div class="stat-card"><span class="stat-number">6</span><span class="stat-label">fuentes / bases de<br>búsqueda académica</span></div>
       </div>
 
@@ -347,32 +348,92 @@
       <div class="section-head reveal">
         <p class="eyebrow"><span>07</span> · DEMOSTRACIÓN DEL SISTEMA EN FUNCIONAMIENTO</p>
         <h2 id="demo-title">Evidencia del caso de uso <em>end-to-end.</em></h2>
-        <p class="section-intro">Espacio preparado para insertar el video demostrativo completo del flujo multiagente cuando la URL definitiva esté disponible.</p>
+        <p class="section-intro">Demostración del caso práctico: coordinación de agentes, desarrollo del producto web y publicación del resultado.</p>
       </div>
 
       <article class="demo-video-card reveal">
-        <div class="demo-video-label"><span class="demo-dot"></span> VIDEO DEMOSTRATIVO PRÓXIMAMENTE</div>
-        <div class="demo-video-embed" aria-label="Contenedor del video demostrativo">
-          <!-- Reemplazar este bloque por iframe/video cuando exista la URL final. -->
-          <div class="demo-play-button" aria-hidden="true">▶</div>
-          <div class="demo-video-placeholder">
-            <strong>Demostración del sistema en funcionamiento</strong>
-            <span>Placeholder listo para GitHub Pages</span>
-          </div>
+        <div class="demo-video-label"><span class="demo-dot"></span> DEMOSTRACIÓN EN VIDEO · OPENCLAW</div>
+        <div class="demo-video-embed">
+          <iframe
+            src="https://www.youtube.com/embed/DpvmaHxRtbU"
+            title="Demostración del modelo multiagente de IA para el SDLC"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
         </div>
+        <p class="demo-video-caption">En esta demostración se presenta el funcionamiento del modelo multiagente y su aplicación en un caso práctico de desarrollo de software. <a href="https://www.youtube.com/watch?v=DpvmaHxRtbU" target="_blank" rel="noopener">Ver también en YouTube ↗</a></p>
       </article>
     </section>
 
-    <!-- 08 · Conclusión: texto de prueba claramente marcado -->
+    <!-- 08 · Demostración de envío de correo mediante MCP -->
+    <section class="section section-mail-demo section-anchor" id="envio-correo" aria-labelledby="mail-demo-title">
+      <div class="section-head reveal">
+        <p class="eyebrow"><span>08</span> · DEMOSTRACIÓN DE INTEGRACIÓN MCP</p>
+        <h2 id="mail-demo-title">La coordinación también puede <em>llegar hasta el correo.</em></h2>
+        <p class="section-intro">Como cierre de la sustentación, el ProjectManager enviará directamente un correo de agradecimiento al profesor mediante el MCP de OpenClaw.</p>
+      </div>
+
+      <article class="mail-live-card reveal">
+        <div class="mail-live-top">
+          <span class="mail-live-indicator"><span class="mail-live-dot"></span> ACCIÓN EN TIEMPO REAL</span>
+          <span class="mail-live-tech">OPENCLAW · MCP · CORREO</span>
+        </div>
+        <div class="mail-live-content">
+          <div class="mail-icon-orbit" aria-hidden="true"><span class="mail-icon">✉</span><span class="mail-orbit-dot"></span></div>
+          <div>
+            <p class="mail-kicker">UNA INSTRUCCIÓN. UNA ACCIÓN REAL.</p>
+            <h3>Un agradecimiento enviado directamente desde mi cuenta.</h3>
+            <p>ProjectManager realizará el envío del correo al profesor mediante la integración MCP de OpenClaw.</p>
+          </div>
+        </div>
+        <div class="mail-flow" aria-label="Pasos de la demostración">
+          <div class="mail-flow-step"><span>01</span><b>Instrucción</b></div><i aria-hidden="true">→</i>
+          <div class="mail-flow-step"><span>02</span><b>Herramienta MCP</b></div><i aria-hidden="true">→</i>
+          <div class="mail-flow-step"><span>03</span><b>Envío autorizado</b></div><i aria-hidden="true">→</i>
+          <div class="mail-flow-step"><span>04</span><b>Confirmación</b></div>
+        </div>
+      </article>
+
+      <div class="email-prompt-card reveal">
+        <div class="email-prompt-heading">
+          <div><p class="mini-label">PROMPT PARA PROJECTMANAGER</p><h3>Instrucción de envío</h3></div>
+          <button class="button button-copy-prompt" id="copy-email-prompt" type="button"><span aria-hidden="true">▣</span> Copiar prompt</button>
+        </div>
+        <pre class="email-prompt-code"><code id="email-agent-prompt">ProjectManager: envía AHORA, directamente y sin crear un borrador, un correo desde mi cuenta conectada a esta dirección:
+abenavidesa2@unicartagena.edu.co
+
+Asunto: Gracias por acompañarme durante toda mi carrera | Proyecto de grado
+
+Mensaje:
+Estimado profesor Alexander Benavides:
+
+Quiero expresarle mi más sincero agradecimiento por acompañarme durante toda mi carrera universitaria. Gracias por su orientación, paciencia, disposición y por compartir sus conocimientos a lo largo de este camino. Su acompañamiento ha sido importante para mi formación y para llegar a este momento tan significativo, en el que presento mi proyecto de grado.
+
+También quiero agradecerle por el apoyo brindado durante el desarrollo de este proyecto. Para mí es muy especial cerrar esta etapa reconociendo a las personas que hicieron parte de ella.
+
+Muchas gracias por todo, profesor.
+
+Cordialmente,
+Alberto Miguel Torres Ortega
+Estudiante de Ingeniería de Software
+Universidad de Cartagena
+
+Utiliza la herramienta MCP de correo disponible en OpenClaw y realiza el envío real ahora. No prepares solamente un borrador, no solicites confirmación adicional y no envíes el mensaje a otra dirección. Si la herramienta no está conectada o el envío falla, informa el problema con claridad y no afirmes que el correo fue enviado.</code></pre>
+        <p class="copy-feedback" id="copy-feedback" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- 09 · Conclusión -->
     <section class="section section-conclusion section-anchor" id="conclusion" aria-labelledby="conclusion-title">
       <div class="section-head reveal">
-        <p class="eyebrow"><span>08</span> · CONCLUSIÓN</p>
+        <p class="eyebrow"><span>09</span> · CONCLUSIÓN</p>
         <h2 id="conclusion-title">Una idea que conecta <em>el proceso completo.</em></h2>
-        <p class="section-intro">El cierre definitivo se redactará después de consolidar los resultados y la validación del prototipo.</p>
+        <p class="section-intro">Un modelo que combina especialización, coordinación y supervisión humana para apoyar diferentes etapas del desarrollo de software.</p>
       </div>
       <article class="conclusion-placeholder reveal">
-        <div class="demo-label"><span class="demo-dot"></span> TEXTO DE PRUEBA · REEMPLAZAR AL FINALIZAR</div>
-        <p>El modelo propuesto busca integrar capacidades de Inteligencia Artificial a través de agentes especializados que colaboran bajo un flujo coordinado, con puntos de validación humana. La conclusión final deberá establecer qué objetivos se alcanzaron, qué evidencias aporta el prototipo y cuáles son sus limitaciones.</p>
+        <p>El proyecto permitió diseñar, implementar y desplegar un modelo multiagente integrado por seis agentes especializados y un agente coordinador. Su aplicación en un caso práctico permitió observar la colaboración entre agentes durante el desarrollo y la publicación de un producto web. El aporte central de la propuesta es una estructura que organiza tareas, conecta etapas y conserva la validación humana. Esta forma de trabajo tiene potencial para favorecer la eficiencia operativa y optimizar el uso de recursos en los procesos de desarrollo de software.</p>
         <div class="conclusion-signature"><span class="signature-line"></span><span>CIERRE DE LA SUSTENTACIÓN</span></div>
       </article>
     </section>
